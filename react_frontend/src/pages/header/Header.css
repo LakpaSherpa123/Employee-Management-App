@@ -1,0 +1,35 @@
+.navbar{
+    background-color: blue;
+}
+
+.navbar .navbar-brand{
+
+    color: #ffffff;
+
+}
+
+/*Style the navigation Link*/
+.navbar .nav-link{
+    color: #fff !important;     /*White text color*/
+    text-decoration: none !important; /*Remove underline*/
+    border-right: 0.5px solid #ffffff;
+    text-align: center;
+}
+
+.navbar .nav-link:hover{
+    transition: 0.3s all;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.navbar .nav-link:active{
+    background: rgba(255, 255, 255, 0.8); /* Darker white background on click */
+    transform: scale(0.95); /* Scale down slightly to give a pressed effect */
+}
+
+
+/* Add media query for small screens */
+@media(max-width: 576px){
+    .navbar .nav-link{
+        margin-right: 0; /*Remove margin for small screens*/
+    }
+}
