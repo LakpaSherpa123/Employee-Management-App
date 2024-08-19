@@ -1,12 +1,16 @@
-import "./PostUser.css"
+import "./Employee.css"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+
 
 const PostUser = () =>{
 
     const [message, setMessage] = useState("Create New Employee");
     const employeeForm = useForm();
+    const navigate = useNavigate();
 
     const onSubmitEmployeeForm= (data)=>{
         console.log(data);
@@ -19,12 +23,16 @@ const PostUser = () =>{
       
             const res = await axios.post(API_URL, info);
             console.log(res.data);
+       
+            navigate('/');
           } catch (error) {
             console.error("Error", error);
+  
           }
     }
     return(
-        <div>
+    
+        <div  className="formContainer">
             <h1>Create New Employee</h1>
             <form onSubmit={employeeForm.handleSubmit(onSubmitEmployeeForm)}>
             <label for="blank" class="text-indicator no_marg">
@@ -48,7 +56,9 @@ const PostUser = () =>{
 
             <input type="submit" value={"Create"} />
           </form>
+     
         </div>
+    
     )
 }
 export default PostUser;

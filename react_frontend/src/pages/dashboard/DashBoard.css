@@ -1,0 +1,59 @@
+.tableContainer {
+    max-width: 800px auto;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .tableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tableContainer th, .tableContainer td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tableContainer th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .tableContainer td {
+    vertical-align: middle;
+  }
+  
+  .tableContainer td button {
+    margin: 5px;
+  }
+  
+  .tableContainer td button.outline-secondary {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #666;
+  }
+  
+  .tableContainer td button.outline-danger {
+    background-color: #fff;
+    border-color: #d9534f;
+    color: #d9534f;
+  }
+  
+  .tableContainer td button:hover {
+    background-color: #eee;
+    border-color: #aaa;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .tableContainer td button:active {
+    background-color: #ddd;
+    border-color: #999;
+    color: #666;
+  }
